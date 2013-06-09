@@ -182,7 +182,8 @@ body {
   font: 18px/1.831 "Open Sans", sans-serif; }
 
 p {
-  font-weight: 300; }
+  font-weight: 300;
+  padding: 1%; }
 
 a {
   color: #3498DB;
