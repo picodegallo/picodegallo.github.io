@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Flatiron School | Mental Safari]]></title>
-  <link href="http://picodegallo.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Gmail | Mental Safari]]></title>
+  <link href="http://picodegallo.github.io/blog/categories/gmail/atom.xml" rel="self"/>
   <link href="http://picodegallo.github.io/"/>
   <updated>2013-06-10T23:36:06-04:00</updated>
   <id>http://picodegallo.github.io/</id>
@@ -73,7 +73,7 @@
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x75;&#x73;&#101;&#x72;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x75;&#x73;&#x65;&#114;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
+</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x75;&#115;&#101;&#x72;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x75;&#115;&#x65;&#x72;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
 <span class="line">led.off
 </span><span class="line">puts &ldquo;Total Unread Emails: #{gmail.inbox.count(:unread)}&rdquo;
 </span><span class="line">has_unread = gmail.inbox.count(:unread) !=0
@@ -114,41 +114,6 @@
 
 
 <p>This is a poorly written sketch, but for the purposes of a dry run it did its job. I&rsquo;m hoping to take this further by writting in a delay and loop so that the sketch runs every 5-10 mins. Another feature I&rsquo;d like to add is a rgbLED so that I can light up a red LED when the inbox is full and a green LED when the inbox is empty.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mentally Reframing Ruby – Part 1]]></title>
-    <link href="http://picodegallo.github.io/blog/2013/06/09/flatiron-day-3/"/>
-    <updated>2013-06-09T15:53:00-04:00</updated>
-    <id>http://picodegallo.github.io/blog/2013/06/09/flatiron-day-3</id>
-    <content type="html"><![CDATA[<h2> The Beginning </h2>
-
-
-<p>Coming from a design background, I have a hard time understanding how something works or its purpose until I can see it applied to a real life situation. This is how I feel about learning Ruby. While I&rsquo;m becoming more familiar with the language day by day, I still needed an example of a practical application of it in order to wrap my head around when it&rsquo;s used.</p>
-
-<p>In order to bring it all together, I decided to turn to an area I have a little bit of know-how in: physical computing. Ever since I was a kid, I&rsquo;ve wanted to take over the world – and that dream starts by having your very own robot army. While I don&rsquo;t have a large army to date, I have made a few small models with various microcontrollers, specifically with the ever popular Arduino. But, the Ardunio platform is based on a language (and environment) called Wiring, which is in turn based on C++ – quite a bit different from our pretty happy friend Ruby.</p>
-
-<hr>
-
-
-<h2> Experiment 1 </h2>
-
-
-<p>So, I did a bit of research and found that someone had built a gem called dino last year for the exact purpose of running ruby sketches on your Arduino. After installing the dino gem and hooking up the Ardunio, all that was left was to write a simple sketch and watch what happend.</p>
-
-<p>By writing some Ruby and following a few syntax rules dino lays out, you can get an LED blinking in no time. And while this is a little underwhelming, I&rsquo;m hoping to create more interesting projects with this pairing as I begin to learn more.</p>
-
-<h4>Here is the result of that labor:</h4>
-
-
-<iframe class="vine-embed" src="https://vine.co/v/bL2wPqIgKPj/embed/simple" width="320" height="320" frameborder="0"></iframe>
-
-
-<script async src="http://picodegallo.github.io//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
-
-
-<p></p>
 ]]></content>
   </entry>
   
