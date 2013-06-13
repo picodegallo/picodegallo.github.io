@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gmail | Mental Safari]]></title>
   <link href="http://picodegallo.github.io/blog/categories/gmail/atom.xml" rel="self"/>
   <link href="http://picodegallo.github.io/"/>
-  <updated>2013-06-10T23:36:06-04:00</updated>
+  <updated>2013-06-12T22:07:09-04:00</updated>
   <id>http://picodegallo.github.io/</id>
   <author>
     <name><![CDATA[Kristen Curtis]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<h2> What the What with the Gmail </h2>
 
 
-<p>After my first experiment with Ruby and Arduino, I wanted to try writing a sketch that would build off of the code I had written from the blinking LED test. Using the blinking LED as an indicator, I thought it would be interesting to see if I could get my Ardunio talking with Gmail to alert me if I had any unread inbox messages. After doing some research, I found a gem called Gmail that allows me, through Ruby, to do just that.</p>
+<p>After my first experiment with Ruby and Arduino, I wanted to try writing a sketch that would build off of the code I had written from the blinking LED test. Using the blinking LED as an indicator, I thought it would be interesting to see if I could get my Ardunio talking with Gmail to alert me if I had any unread inbox messages. After doing some research, I found a Ruby gem called Gmail that allows me to do just that.</p>
 
 <hr>
 
@@ -49,7 +49,7 @@
 <h2> Board in the USA </h2>
 
 
-<p>Dino requires us to define our board, tell it that we&rsquo;ll be inputing and outputing data, and tell it that we&rsquo;re using a serial connection (since my Ardunio is hooked up via USB). Next, we&rsquo;ll be defining our LED variable, which should be easy since it was in the previous sketch. Note: Dino also offers a good directory full of example code for setting up any given component.</p>
+<p>Dino requires us to define our board, tell it that we&rsquo;ll be inputing and outputing data, and tell it that we&rsquo;re using a serial connection (since my Ardunio is hooked up via USB). Next, we&rsquo;ll be defining our LED variable, which should be easy since it was in the previous sketch.Note: Dino also offers a good directory full of example code for setting up any given component.</p>
 
 <h4>Setting up dino</h4>
 
@@ -68,12 +68,12 @@
 <h2> You've Got Mail </h2>
 
 
-<p>In the next few lines of code we: call on Gmail (through the gmail gem) to let us access our inbox, check if our inbox is empty, set the led variable to a resting state, and define a variable equal to the number of unread emails.
+<p>In the next few lines of code we: call on Gmail to let us access our inbox, check if our inbox is empty, set the led variable to a resting state, and define a variable equal to the number of unread emails. Note: In the code listed below, you&rsquo;d actually pass in your real email address and password.
 <figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x75;&#115;&#101;&#x72;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#x75;&#115;&#x65;&#x72;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
+</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#117;&#115;&#x65;&#x72;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x75;&#x73;&#101;&#114;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
 <span class="line">led.off
 </span><span class="line">puts &ldquo;Total Unread Emails: #{gmail.inbox.count(:unread)}&rdquo;
 </span><span class="line">has_unread = gmail.inbox.count(:unread) !=0
@@ -113,7 +113,14 @@
 <h2>Next Steps</h2>
 
 
-<p>This is a poorly written sketch, but for the purposes of a dry run it did its job. I&rsquo;m hoping to take this further by writting in a delay and loop so that the sketch runs every 5-10 mins. Another feature I&rsquo;d like to add is a rgbLED so that I can light up a red LED when the inbox is full and a green LED when the inbox is empty.</p>
+<p>I&rsquo;m hoping to take this further by:</p>
+
+<ul><li>Writting in a delay and loop so that the sketch runs every 5-10 min</li> 
+<li> Adding an rgbLED so that I can light up a red LED when the inbox is full and a green LED when the inbox is empty.</li>
+</ul>
+
+
+
 ]]></content>
   </entry>
   
