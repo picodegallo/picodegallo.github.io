@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron School | Mental Safari]]></title>
   <link href="http://picodegallo.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://picodegallo.github.io/"/>
-  <updated>2013-06-16T16:38:01-04:00</updated>
+  <updated>2013-06-16T21:40:46-04:00</updated>
   <id>http://picodegallo.github.io/</id>
   <author>
     <name><![CDATA[Kristen Curtis]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Design is NOT for Designers]]></title>
+    <link href="http://picodegallo.github.io/blog/2013/06/16/design-is-not-for-designers/"/>
+    <updated>2013-06-16T15:30:00-04:00</updated>
+    <id>http://picodegallo.github.io/blog/2013/06/16/design-is-not-for-designers</id>
+    <content type="html"><![CDATA[<h2>Becoming Multilingual</h2>
+
+
+<p>
+One thing that has always fascinated me about programming is the ability of programmers to become multilingual with their languages. You might know Ruby, but you also know quite a bit of SQL, or JS, or HTML, or even the nuances of using GitHub. The drive to learn more in order to build and communicate more is at the heart of the programming community itself. Even the structure and layout of a particular language, like Ruby, is governed by its own design language. Why then is it so freaking hard to find a nicely designed programming presentation on <a href= “http://speakerdeck.com”>Speaker Deck?</a>  Seriously, I just read 13 decks and only 3 of them were acceptably nice.</p>
+
+<hr>
+
+
+
+
+<h2>Design is a Language We All Speak</h2>
+
+
+<p>You might think that design is for designers, but the truth is: we all know good design when we see it. Good design is simple, arresting, succinct, and above all communicates a SINGLE message. The same is true for a presentation: each slide should be communicating one thing. If you can’t sum up what that picture of you racing squirrels on slide 7 is doing in one short sentence – take it out. Or better yet, write that one short sentence and use it on your slide.</p>
+
+<p> <hr></p>
+
+<h2>Blackout the Rainbow</h2>
+
+
+<p>Quit using every color Newton gave you. If you need inspiration for color swatches try <a href="https://kuler.adobe.com/explore/most-favorite/?time=month">Adobe Kuler</a> or if you hate Adobe, use <a href="http://www.colourlovers.com">Color Lovers.</a> The same lesson for colors should be applied to fonts. If you use more than two or three fonts (one for headlines, one for body, and one for emphasis) you&rsquo;re doing it wrong. If you need ideas for font pairings checkout: <a href="http://ifontyou.com">I Font You.</a></p>
+
+<hr>
+
+
+
+
+<h2>Resources</h2>
+
+
+<p>If you&rsquo;re still confused about what a good presentation looks like, take a look at some of my favorites from the programming community on Speaker Deck:</p>
+
+<ol>
+  <li><a href="https://speakerdeck.com/ianbishop/lets-talk-about-ruby">Let's Talk About Ruby – Ian Bishop</a></li>
+  <li><a href="https://speakerdeck.com/holman/how-to-build-a-github">How to Build a GitHub – Zach Holman</a></li>
+  <li><a href="https://speakerdeck.com/kouphax/ruby-by-example">Ruby By Example – James Hughes</a></li>
+</ol>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mentally Reframing Ruby – Part 2]]></title>
@@ -73,7 +122,7 @@
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x75;&#x73;&#101;&#114;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#117;&#115;&#x65;&#114;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
+</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x75;&#115;&#x65;&#114;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#x75;&#115;&#x65;&#x72;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
 <span class="line">led.off
 </span><span class="line">puts &ldquo;Total Unread Emails: #{gmail.inbox.count(:unread)}&rdquo;
 </span><span class="line">has_unread = gmail.inbox.count(:unread) !=0
