@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Mental Safari]]></title>
   <link href="http://picodegallo.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://picodegallo.github.io/"/>
-  <updated>2013-06-27T23:03:17-04:00</updated>
+  <updated>2013-07-15T23:22:13-04:00</updated>
   <id>http://picodegallo.github.io/</id>
   <author>
     <name><![CDATA[Kristen Curtis]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Artificial Intelligence? That's What She Said.]]></title>
+    <link href="http://picodegallo.github.io/blog/2013/07/15/artificial-intelligence-thats-what-she-said/"/>
+    <updated>2013-07-15T22:17:00-04:00</updated>
+    <id>http://picodegallo.github.io/blog/2013/07/15/artificial-intelligence-thats-what-she-said</id>
+    <content type="html"><![CDATA[<h2>Lubricating Your Base</h2>
+
+
+<p>
+Having lived in Seattle for the better part of 6 years before moving to NY, I like to keep up on the lastest and greatest technology being developed in the tech haven that is Washington state. While Amazon is expanding and building new campuses in Seattle, and MSFT is attempting to maintain relevancy there, the University of Washington is giving researchers money to program an algorithm, code name: <a href="http://people.cs.umass.edu/~brun/pubs/pubs/Kiddon11.pdf">DEviaNT (Double Entendre via Noun Transfer),</a>  that analyzes harmless text to determine if adding &ldquo;That&rsquo;s what she said&rdquo; to the end of a given sentence makes it risque. As of now, the program has a 70% accuracy rating – which is expected to reach 99.6% in the next round of code refactoring.</p>
+
+<hr>
+
+
+
+
+<h2>Going Deep</h2>
+
+
+<p>Digging through the project overview authored by the creators, I found that they had cited a Ruby gem called <a href="https://github.com/bvandenbos/twss"> &ldquo;TWSS&rdquo; </a> to pre-train their algorithm. Looking a bit more into what the gem does, I discovered that it intakes data via hpricot, compares that to a txt file of predetermined &ldquo;TWSS&rdquo; lines and a txt file of non-&ldquo;TWSS&rdquo; lines (my favorite of which is: &ldquo;I forgot about the baby monitor&rdquo;) and then writes the input to the associated file in order for the alorithm to learn. The gem then outputs &ldquo;TWSS&rdquo; if the input is relevant.</p>
+
+<hr>
+
+
+
+
+<h2>The Long Hard Run</h2>
+
+
+<p>While the actual UW algorithm went above and beyond the gem&rsquo;s capabilities by translating assumptions about &ldquo;TWSS&rdquo; sentence usage to mathematical representations of &ldquo;noun sexiness&rdquo; and &ldquo;verb sexiness,&rdquo; it was still interesting to see that Ruby was at the core of all this research. It may all seem like fun and games to the reader, but the point of the research has far reaching consequences when viewed from the perspective of an AI researcher or developer. Natural human language has many nuances and subtleties that are difficult for a computer to detect. By building smarter models and algorithms that are able to diferentiate between language usage, we can ultimately build smarter programs and machines to usher us into the future we&rsquo;ve all been waiting for.*</p>
+
+<p>*That future is basically robots and awesomeness in case you were wondering.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mentally Reframing Ruby – Part 2]]></title>
@@ -73,7 +108,7 @@
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x75;&#x73;&#101;&#x72;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#x75;&#115;&#101;&#114;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
+</pre></td><td class="code"><pre><code class=""><span class="line">Gmail.connect(&ldquo;<a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#117;&#x73;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x75;&#x73;&#101;&#x72;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a>&rdquo;, &ldquo;password&rdquo;) do |gmail|
 <span class="line">led.off
 </span><span class="line">puts &ldquo;Total Unread Emails: #{gmail.inbox.count(:unread)}&rdquo;
 </span><span class="line">has_unread = gmail.inbox.count(:unread) !=0
