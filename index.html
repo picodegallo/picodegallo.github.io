@@ -9,7 +9,7 @@
   <meta name="author" content="Kristen Curtis">
 
   
-  <meta name="description" content="Mental Safari A catalog of failure and redmeption Jul 15th, 2013 Flatiron School Robots Ruby TWSS Artificial Intelligence? That&#8217;s What She &hellip;">
+  <meta name="description" content="Mental Safari A catalog of failure and redmeption Jul 30th, 2013 D3 Data Viz Illustrator Raphael SVG Defining Complicated SVG Paths for Data &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,6 +102,101 @@
 
 <div class="blog-index">
   
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2013-07-30T22:06:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2013</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/D3/"><span class="badge">D3</span></a>
+          
+          <a href="/blog/categories/Data Viz/"><span class="badge">Data Viz</span></a>
+          
+          <a href="/blog/categories/Illustrator/"><span class="badge">Illustrator</span></a>
+          
+          <a href="/blog/categories/Raphael/"><span class="badge">Raphael</span></a>
+          
+          <a href="/blog/categories/SVG/"><span class="badge">SVG</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2013/07/30/defining-complicated-svg-paths-for-data-visualizations/">Defining Complicated SVG Paths for Data Visualizations</a></h1>
+      <h2>A quick hack</h2>
+
+
+<p>
+The data visualization fad has been running rampant for a few years now, but I wanted to detail a small SVG (Scalable Vector Graphic) hack I found helpful for those jumping on the vector train. Many of the SVG libraries available to programmers (I&rsquo;m talking about Raphael, D3, Processing, etc) contain code that looks something like this:</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">< svg > viewBox = "0 0 1100 400" version = "1.1"
+<span class="line">< path id = "s3" d = "M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60"
+</span><span class="line">fill = "green" stroke = "black" stroke-width = "3"/ >
+</span><span class="line">< /svg >
+</code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Where the path is defined by a set of letters (M – moveto, L &ndash; lineto) and numbers: &ldquo;M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60&rdquo; but defining all of that path logic myself just to render an octogon seems too complex, especially when considering that a more complex shape will have more complex path logic.</p>
+
+<hr>
+
+
+
+
+<h2>Finding SVG Paths in Illustrator</h2>
+
+
+<p>
+This is where a small hack can set you free. If you&rsquo;re already design savvy, you can simply draw your shape of choice in Illustrator, hit Save As, select SVG, and hit Save. Then in the dialog box that appears, select the button that says &ldquo;Show SVG Code&rdquo;, and BAM! A .txt file will open up with your path defined for you.</p>
+
+<hr>
+
+
+
+
+<h2>Finding SVG Paths via the Browser</h2>
+
+
+<p>
+For those without Illustrator, there&rsquo;s still hope. One way is to find SVG shapes that already exisit online through services such as <a href="http://thenounproject.com">The Noun Project</a> where you can download an SVG file of your choice. Then open it up in your browser, inspect the element, and BAM! Your complicated SVG path logic is nested inside.</p>
+
+<p>YOU&rsquo;RE WELCOME. &lt;3</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
   
   
     <article>

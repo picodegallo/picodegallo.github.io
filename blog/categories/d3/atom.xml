@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: D3 | Mental Safari]]></title>
+  <link href="http://picodegallo.github.io/blog/categories/d3/atom.xml" rel="self"/>
+  <link href="http://picodegallo.github.io/"/>
+  <updated>2013-07-30T23:00:26-04:00</updated>
+  <id>http://picodegallo.github.io/</id>
+  <author>
+    <name><![CDATA[Kristen Curtis]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Defining Complicated SVG Paths for Data Visualizations]]></title>
+    <link href="http://picodegallo.github.io/blog/2013/07/30/defining-complicated-svg-paths-for-data-visualizations/"/>
+    <updated>2013-07-30T22:06:00-04:00</updated>
+    <id>http://picodegallo.github.io/blog/2013/07/30/defining-complicated-svg-paths-for-data-visualizations</id>
+    <content type="html"><![CDATA[<h2>A quick hack</h2>
+
+
+<p>
+The data visualization fad has been running rampant for a few years now, but I wanted to detail a small SVG (Scalable Vector Graphic) hack I found helpful for those jumping on the vector train. Many of the SVG libraries available to programmers (I&rsquo;m talking about Raphael, D3, Processing, etc) contain code that looks something like this:</p>
+
+<p><figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">&lt; svg > viewBox = &ldquo;0 0 1100 400&rdquo; version = &ldquo;1.1&rdquo;
+<span class="line">&lt; path id = &ldquo;s3&rdquo; d = &ldquo;M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60&rdquo;
+</span><span class="line">fill = &ldquo;green&rdquo; stroke = &ldquo;black&rdquo; stroke-width = &ldquo;3&rdquo;/ >
+</span><span class="line">&lt; /svg >
+</code></pre></td></tr></tbody></table></div></figure></p>
+
+<p>Where the path is defined by a set of letters (M – moveto, L &ndash; lineto) and numbers: &ldquo;M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60&rdquo; but defining all of that path logic myself just to render an octogon seems too complex, especially when considering that a more complex shape will have more complex path logic.</p>
+
+<hr>
+
+
+
+
+<h2>Finding SVG Paths in Illustrator</h2>
+
+
+<p>
+This is where a small hack can set you free. If you&rsquo;re already design savvy, you can simply draw your shape of choice in Illustrator, hit Save As, select SVG, and hit Save. Then in the dialog box that appears, select the button that says &ldquo;Show SVG Code&rdquo;, and BAM! A .txt file will open up with your path defined for you.</p>
+
+<hr>
+
+
+
+
+<h2>Finding SVG Paths via the Browser</h2>
+
+
+<p>
+For those without Illustrator, there&rsquo;s still hope. One way is to find SVG shapes that already exisit online through services such as <a href="http://thenounproject.com">The Noun Project</a> where you can download an SVG file of your choice. Then open it up in your browser, inspect the element, and BAM! Your complicated SVG path logic is nested inside.</p>
+
+<p>YOU&rsquo;RE WELCOME. &lt;3</p>
+]]></content>
+  </entry>
+  
+</feed>

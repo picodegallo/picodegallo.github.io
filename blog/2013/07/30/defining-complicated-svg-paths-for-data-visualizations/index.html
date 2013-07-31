@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Artificial Intelligence? That's What She Said. - Mental Safari</title>
+  <title>Defining Complicated SVG Paths for Data Visualizations - Mental Safari</title>
   <meta name="author" content="Kristen Curtis">
 
   
-  <meta name="description" content="Artificial Intelligence? That's What She Said. Jul 15th, 2013 Getting in the Mood Having lived in Seattle for the better part of 6 years before &hellip;">
+  <meta name="description" content="Defining Complicated SVG Paths for Data Visualizations Jul 30th, 2013 A quick hack The data visualization fad has been running rampant for a few &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://picodegallo.github.io/blog/2013/07/15/artificial-intelligence-thats-what-she-said">
+  <link rel="canonical" href="http://picodegallo.github.io/blog/2013/07/30/defining-complicated-svg-paths-for-data-visualizations">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -98,7 +98,7 @@
 
   <header>
   <div class="jumbotron">
-    Artificial Intelligence? That's What She Said.
+    Defining Complicated SVG Paths for Data Visualizations
 	<h5>
 
 
@@ -111,38 +111,53 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2013-07-15T22:17:00-04:00" pubdate data-updated="true">Jul 15<span>th</span>, 2013</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2013-07-30T22:06:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2013</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <h2>Getting in the Mood</h2>
+      <h2>A quick hack</h2>
 
 
 <p>
-Having lived in Seattle for the better part of 6 years before moving to NY, I like to keep up on the lastest and greatest technology being developed in the tech haven that is Washington state. While Amazon is expanding and building new campuses in Seattle, and MSFT is attempting to maintain relevancy there, the University of Washington is housing two researchers armed with grant money to program an algorithm, code name: <a href="http://people.cs.umass.edu/~brun/pubs/pubs/Kiddon11.pdf">DEviaNT (Double Entendre via Noun Transfer),</a>  that analyzes harmless text to determine if adding &ldquo;That&rsquo;s what she said&rdquo; to the end of a given sentence makes it risque. As of now, the program has a 70% accuracy rating – which is expected to reach 99.6% in the next round of code refactoring.</p>
+The data visualization fad has been running rampant for a few years now, but I wanted to detail a small SVG (Scalable Vector Graphic) hack I found helpful for those jumping on the vector train. Many of the SVG libraries available to programmers (I&rsquo;m talking about Raphael, D3, Processing, etc) contain code that looks something like this:</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">< svg > viewBox = "0 0 1100 400" version = "1.1"
+<span class="line">< path id = "s3" d = "M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60"
+</span><span class="line">fill = "green" stroke = "black" stroke-width = "3"/ >
+</span><span class="line">< /svg >
+</code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>Where the path is defined by a set of letters (M – moveto, L &ndash; lineto) and numbers: &ldquo;M 60 0 L 120 0 L 180 60 L 180 120 L 120 180 L 60 180 L 0 120 L 0 60&rdquo; but defining all of that path logic myself just to render an octogon seems too complex, especially when considering that a more complex shape will have more complex path logic.</p>
 
 <hr>
 
 
 
 
-<h2>Going Deep</h2>
+<h2>Finding SVG Paths in Illustrator</h2>
 
 
-<p>Digging through the project overview authored by the creators, I found that they had cited a Ruby gem called <a href="https://github.com/bvandenbos/twss"> &ldquo;TWSS&rdquo; </a> to pre-train their algorithm. Looking a bit more into what the gem does, I discovered that it intakes data via hpricot, compares that to a txt file of predetermined &ldquo;TWSS&rdquo; lines and a txt file of non-&ldquo;TWSS&rdquo; lines (my favorite of which is: &ldquo;I forgot about the baby monitor&rdquo;) and then writes the input to the associated file in order for the alorithm to learn. The gem then outputs &ldquo;TWSS&rdquo; if the input is relevant.</p>
+<p>
+This is where a small hack can set you free. If you&rsquo;re already design savvy, you can simply draw your shape of choice in Illustrator, hit Save As, select SVG, and hit Save. Then in the dialog box that appears, select the button that says &ldquo;Show SVG Code&rdquo;, and BAM! A .txt file will open up with your path defined for you.</p>
 
 <hr>
 
 
 
 
-<h2>The Long Hard Run</h2>
+<h2>Finding SVG Paths via the Browser</h2>
 
 
-<p>While the actual UW algorithm went above and beyond the gem&rsquo;s capabilities by translating assumptions about &ldquo;TWSS&rdquo; sentence usage to mathematical representations of &ldquo;noun sexiness&rdquo; and &ldquo;verb sexiness,&rdquo; it was still interesting to see that Ruby was at the core of all this research. It may all seem like fun and games to the reader, but the point of the research has far reaching consequences when viewed from the perspective of an AI researcher or developer. Natural human language has many nuances and subtleties that are difficult for a computer to detect. By building smarter models and algorithms that are able to diferentiate between language usage, we can ultimately build smarter programs and machines to usher us into the future we&rsquo;ve all been waiting for.*</p>
+<p>
+For those without Illustrator, there&rsquo;s still hope. One way is to find SVG shapes that already exisit online through services such as <a href="http://thenounproject.com">The Noun Project</a> where you can download an SVG file of your choice. Then open it up in your browser, inspect the element, and BAM! Your complicated SVG path logic is nested inside.</p>
 
-<p>*That future is basically robots and awesomeness in case you were wondering.</p>
+<p>YOU&rsquo;RE WELCOME. &lt;3</p>
 
     </div>
   </div>
@@ -161,13 +176,15 @@ Having lived in Seattle for the better part of 6 years before moving to NY, I li
 
 
 
-  <a href="/blog/categories/Flatiron School/"><span class="badge">Flatiron School</span></a>
+  <a href="/blog/categories/D3/"><span class="badge">D3</span></a>
 
-  <a href="/blog/categories/Robots/"><span class="badge">Robots</span></a>
+  <a href="/blog/categories/Data Viz/"><span class="badge">Data Viz</span></a>
 
-  <a href="/blog/categories/Ruby/"><span class="badge">Ruby</span></a>
+  <a href="/blog/categories/Illustrator/"><span class="badge">Illustrator</span></a>
 
-  <a href="/blog/categories/TWSS/"><span class="badge">TWSS</span></a>
+  <a href="/blog/categories/Raphael/"><span class="badge">Raphael</span></a>
+
+  <a href="/blog/categories/SVG/"><span class="badge">SVG</span></a>
 
 
 
@@ -197,10 +214,8 @@ Having lived in Seattle for the better part of 6 years before moving to NY, I li
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2013/06/27/entropy/" title="Previous Post: Entropy">&laquo; Entropy</a>
+            <a class="basic-alignment left" href="/blog/2013/07/15/artificial-intelligence-thats-what-she-said/" title="Previous Post: Artificial Intelligence? That's What She Said.">&laquo; Artificial Intelligence? That's What She Said.</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2013/07/30/defining-complicated-svg-paths-for-data-visualizations/" title="Next Post: Defining Complicated SVG Paths for Data Visualizations">Defining Complicated SVG Paths for Data Visualizations &raquo;</a>
           
         </p>
       </div>
